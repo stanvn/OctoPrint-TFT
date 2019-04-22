@@ -71,7 +71,7 @@ func (m *statusPanel) createInfoBox() *gtk.Box {
 	m.file = MustLabelWithImage("file.svg", "")
 	m.left = MustLabelWithImage("speed-step.svg", "")
 
-	info := MustBox(gtk.ORIENTATION_VERTICAL, 5)
+	info := MustBox(gtk.ORIENTATION_VERTICAL, 10)
 	info.SetHAlign(gtk.ALIGN_START)
 	info.SetHExpand(true)
 	info.SetVExpand(true)

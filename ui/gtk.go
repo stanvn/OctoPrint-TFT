@@ -54,7 +54,7 @@ func MustLabel(label string, args ...interface{}) *gtk.Label {
 	if err != nil {
 		panic(err)
 	}
-
+	l.SetName("label")
 	l.SetMarkup(fmt.Sprintf(label, args...))
 	return l
 }

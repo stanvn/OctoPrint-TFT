@@ -7,17 +7,25 @@ import (
 	"github.com/mcuadros/go-octoprint"
 )
 
-var control = []*octoprint.ControlDefinition{{
-	Name:    "Motor Off",
-	Command: "M18",
-}, {
-	Name:    "Fan On",
-	Command: "M106",
-}, {
-	Name:    "Fan Off",
-	Command: "M106 S0",
-}}
-
+var control = []*octoprint.ControlDefinition{
+	{
+		Name:    "Turn On",
+		Command: "M80",
+	},
+	{
+		Name:    "Turn Off",
+		Command: "M81",
+	},
+	{
+		Name:    "Motor Off",
+		Command: "M18",
+	}, {
+		Name:    "Fan On",
+		Command: "M106",
+	}, {
+		Name:    "Fan Off",
+		Command: "M106 S0",
+	}}
 var controlPanelInstance *controlPanel
 
 type controlPanel struct {

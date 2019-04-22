@@ -14,3 +14,6 @@
 .error {
     background-color:rgba(204, 30, 30, 0.7);
 }
+#label{
+  font-size: 18px;
+}
