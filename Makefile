@@ -13,7 +13,7 @@ GOTEST = $(GOCMD) test -v
 # Environment
 WORKDIR := $(shell pwd)
 BUILD_PATH := $(WORKDIR)/build
-DOCKER_IMAGE_BUILD = mcuadros/octoprint-tft-build
+DOCKER_IMAGE_BUILD = stanvn/octoprint-tft-build
 
 DEBIAN_PACKAGES = JESSIE STRETCH
 STRETCH_NAME := stretch
@@ -49,7 +49,7 @@ build-environment:
 build: | build-environment $(DEBIAN_PACKAGES)
 
 $(DEBIAN_PACKAGES):
-	docker build \
+	docker build --no-cache \
 		--build-arg IMAGE=${${@}_IMAGE} \
 		--build-arg GO_TAGS=${${@}_GO_TAGS} \
 		-t ${DOCKER_IMAGE_BUILD}:${${@}_NAME} . \

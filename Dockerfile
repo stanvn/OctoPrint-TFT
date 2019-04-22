@@ -38,7 +38,7 @@ RUN apt-get -o Acquire::Check-Valid-Until=false update && apt-get -o Acquire::Ch
 # We cache go get gtk, to speed up builds.
 #RUN go get -tags ${GO_TAGS} -v github.com/gotk3/gotk3/gtk/...
 
-ADD . ${GOPATH}/src/github.com/mcuadros/OctoPrint-TFT/
+ADD . ${GOPATH}/src/github.com/stanvn/OctoPrint-TFT/
 #RUN go get -tags ${GO_TAGS} -v ./...
 
-WORKDIR ${GOPATH}/src/github.com/mcuadros/OctoPrint-TFT/
+WORKDIR ${GOPATH}/src/github.com/stanvn/OctoPrint-TFT/
